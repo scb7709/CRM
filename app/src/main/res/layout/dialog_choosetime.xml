@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/butonwhite"
+              android:orientation="vertical"
+    >
+
+
+    <RadioGroup
+        android:id="@+id/dialog_choosetime_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/dialog_choosetime_day"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobuttonpressed_selector"
+            android:textColor="@drawable/t_text_color_selector"
+            android:text="今日"
+            android:gravity="center"
+            android:button="@null"
+            android:textSize="15sp"
+            />
+
+        <RadioButton
+            android:id="@+id/dialog_choosetime_week"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobuttonpressed_selector"
+            android:textColor="@drawable/t_text_color_selector"
+            android:text="本周"
+            android:button="@null"
+            android:gravity="center"
+            android:textSize="15sp"
+            />
+
+        <RadioButton
+            android:id="@+id/dialog_choosetime_month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobuttonpressed_selector"
+            android:text="本月"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@drawable/t_text_color_selector"
+            android:textSize="15sp"
+            />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="开始时间 ："
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/dialog_choosetime_starttime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="结束时间 ："
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/dialog_choosetime_endtime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dialog_choosetime_ok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttonpressed_selector"
+        android:text="确定"
+        android:textColor="@drawable/time_dialog_color"
+        android:textSize="15sp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffdfdfdf"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:layout_marginTop="10dp"
+            >
+
+        <ImageView
+                android:id="@+id/avatar_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/personal"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                />
+
+        <TextView
+                android:id="@+id/customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="朱大荣"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/avatar_icon"
+                />
+
+
+        <TextView
+                android:id="@+id/total_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="共4单"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                />
+    </RelativeLayout>
+
+</LinearLayout>

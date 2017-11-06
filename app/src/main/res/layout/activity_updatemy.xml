@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:orientation="vertical">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/updatemy_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_selector"
+            android:layout_gravity="center"
+
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="我的信息"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/green"
+        android:orientation="vertical"
+        >
+
+        <com.yun.ycw.crm.customview.RoundImageView
+            android:id="@+id/updatemy_icon_iv"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/hand"
+            />
+
+        <TextView
+            android:id="@+id/updatemy_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="朱大荣"
+
+            android:textColor="#fff"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/updatemy_phonenumber_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="152"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangularframe"
+        android:layout_height="1dp"
+        ></View>
+
+    <TextView
+        android:id="@+id/updatemy_company_tv"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="公司"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangularframe"
+        android:layout_height="1dp"
+        ></View>
+    <TextView
+        android:id="@+id/updatemy_department_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="部门"
+        />
+    <View
+        android:id="@+id/updatemy_team_view"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangularframe"
+        android:layout_height="1dp"
+        ></View>
+    <TextView
+        android:id="@+id/updatemy_team_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="团队"
+        />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangularframe"
+        android:layout_height="1dp"
+        ></View>
+    <TextView
+        android:id="@+id/updatemy_position_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="职位"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangularframe"
+        android:layout_height="1dp"
+        ></View>
+
+
+
+
+    <TextView
+        android:id="@+id/updatemy_email_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="邮箱"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangularframe"
+        android:layout_height="1dp"
+        ></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></View>
+
+    <Button
+        android:id="@+id/updatemy_outlogin_bu"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/reset_address_btn"
+        android:text="退出"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        />
+</LinearLayout>

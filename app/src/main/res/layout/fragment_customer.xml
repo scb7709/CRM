@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/customer_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+
+        <ImageButton
+            android:id="@+id/customer_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_selector"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:id="@+id/customer_man"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="客户信息"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            />
+
+        <ImageView
+            android:id="@+id/customer_add"
+            android:layout_width="30dp "
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/add"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/butonwhite"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/queryroundframe"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/search"
+                />
+
+            <EditText
+                android:id="@+id/customer_query_ed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入工长名、电话搜索..."
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        >
+
+        <RadioGroup
+            android:id="@+id/sort_rgs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/order_num_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/sort_down_img"
+                android:gravity="center"
+                android:text="总下单"
+                android:textColor="@color/sort_text_color"
+                />
+
+            <RadioButton
+                android:id="@+id/order_money_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/sort_down_img"
+                android:gravity="center"
+                android:text="待回款"
+                android:textColor="@color/sort_text_color"
+                />
+
+            <RadioButton
+                android:id="@+id/name_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/sort_down_img"
+                android:gravity="center"
+                android:text="姓名"
+                android:textColor="@color/sort_text_color"
+                />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        >
+
+        <com.yun.ycw.crm.PullableView.PullToRefreshLayout
+            android:id="@+id/refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <include layout="@layout/refresh_head"/>
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.yun.ycw.crm.PullableView.PullableListView
+                android:id="@+id/customer_show_lv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <include layout="@layout/load_more"/>
+
+        </com.yun.ycw.crm.PullableView.PullToRefreshLayout>
+
+
+        <LinearLayout
+            android:id="@+id/customer_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffe7e7e7"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/customer_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/no_order"
+                />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="暂无客户"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/customer_show_lv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/show_head_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible"
+            />
+
+        <com.yun.ycw.crm.customview.SideBar
+            android:id="@+id/sidebar"
+            android:layout_width="30.0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/customer_checkbox_re"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        >
+        <Button
+            android:id="@+id/customer_checkbox_re_repeal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/undone_layout_selector"
+            android:text="撤销"
+            />
+        <Button
+            android:id="@+id/customer_checkbox_re_transfer"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/undone_layout_selector"
+            android:text="转移"
+            />
+        <Button
+            android:id="@+id/customer_checkbox_re_all"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/undone_layout_selector"
+            android:text="全选"
+            />
+    </LinearLayout>
+
+</LinearLayout>

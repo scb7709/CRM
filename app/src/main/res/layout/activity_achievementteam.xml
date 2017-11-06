@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/butonwhite"
+              android:orientation="vertical">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:background="@color/butonwhite"
+                    android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/achievementteam_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/back_selector"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+            android:src="@mipmap/back"/>
+        <TextView
+            android:id="@+id/achievementteam_man"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="下属业绩"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@drawable/rectangularframe"></View>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/achievementteam_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/buttonpressed_selector"
+        android:textColor="@drawable/time_text_color_selector"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="time"
+        android:textSize="15sp"/>
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+          android:background="@drawable/lowline"
+        ></View>
+    <RadioGroup
+        android:id="@+id/achievementteam_rg"
+        android:layout_width="match_parent"
+        android:background="@color/butonwhite"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="主管  "
+            android:textColor="@color/black"
+            />
+
+        <RadioButton
+            android:id="@+id/achievementteam_customer"
+            android:button="@null"
+            android:textColor="@drawable/achievement_text_color_selector"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="客户"
+            android:layout_marginLeft="10dp"
+            />
+        <RadioButton
+            android:id="@+id/achievementteam_order"
+            android:button="@null"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="订单"
+            android:layout_marginLeft="21dp"
+            android:textColor="@drawable/achievement_text_color_selector"
+            />
+        <RadioButton
+            android:id="@+id/achievementteam_money"
+            android:button="@null"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:text="业绩"
+            android:textColor="@drawable/achievement_text_color_selector"
+            />
+        <RadioButton
+            android:id="@+id/achievementteam_commission"
+            android:button="@null"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="提成"
+            android:textColor="@drawable/achievement_text_color_selector"
+            />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/butonwhite"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/achievimentteam_team"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/achievimentteam_allcustomer"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="0"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/achievimentteam_allorder"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="0"
+            android:layout_marginLeft="21dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/achievimentteam_allmoney"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/achievimentteam_commission"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+          android:background="@drawable/lowline"
+        ></View>
+
+    <ListView
+        android:background="@color/butonwhite"
+        android:id="@+id/achievimentteam_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"/>
+</LinearLayout>

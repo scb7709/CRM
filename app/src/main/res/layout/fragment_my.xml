@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/butonwhite"
+              android:orientation="vertical"
+        >
+
+
+    <LinearLayout
+            android:id="@+id/my_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            >
+
+        <com.yun.ycw.crm.customview.RoundImageView
+                android:id="@+id/my_icon_iv"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/hand"
+                />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                >
+
+            <TextView
+                    android:id="@+id/my_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="朱大荣"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    />
+
+            <TextView
+                    android:id="@+id/my_phonenumber_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="158"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/my_goods"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/undone_layout_selector"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+        <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:src="@mipmap/offline_goods_mall"
+                />
+
+        <TextView
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:text="离线商城"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+        <ImageView
+                android:layout_width="5dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/back_grey"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sell_cheats"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/undone_layout_selector"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:src="@mipmap/selll"
+            />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:text="销售秘籍"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/back_grey"
+            />
+    </LinearLayout>
+
+</LinearLayout>

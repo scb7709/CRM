@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+
+    <TextView
+            android:id="@+id/item_subundone_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="姓名"
+            android:textColor="#000"
+            android:gravity="center"
+            />
+
+    <TextView
+            android:id="@+id/item_subundone_num"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="待回款订单"
+            android:gravity="center"
+            android:textColor="#000"
+            />
+
+    <TextView
+            android:id="@+id/item_subundone_money"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="待回款金额"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="#000"
+            />
+
+    <ImageView
+            android:id="@+id/sub_undone_next"
+            android:layout_width="8dp"
+            android:layout_height="12dp"
+            android:background="@mipmap/next"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            />
+</LinearLayout>

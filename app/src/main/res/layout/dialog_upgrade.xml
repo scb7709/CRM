@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+        >
+
+
+    <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="更新提示"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/slidingline"
+            />
+
+    <TextView
+            android:id="@+id/dialog_download_tv"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="正在升级，已完成:0%"
+            android:textColor="#f00"
+
+            />
+
+    <SeekBar
+            android:id="@+id/dialog_download_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            style="@style/Widget.SeekBar.Normal"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            >
+
+        <Button
+                android:id="@+id/dialog_download__cancel"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/head_photo_select_color"
+                android:background="@drawable/my_dialog_btn"
+                android:text="取消升级"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textSize="15sp"
+                />
+    </LinearLayout>
+</LinearLayout>

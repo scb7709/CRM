@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rectangularframe"
+            >
+
+        <ImageButton
+                android:id="@+id/undone_back"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back"
+                android:background="@drawable/back_selector"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="待回款订单"
+                android:textSize="23sp"
+                android:textColor="#ff169a48"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                />
+            <Spinner
+                android:id="@+id/undone_spinner"
+                android:spinnerMode="dialog"
+                android:layout_width="90dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/spinner_down"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                />
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:layout_marginTop="5dp"
+            >
+
+        <RadioGroup
+                android:id="@+id/undone_sort_rgs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+
+            <RadioButton
+                    android:id="@+id/undone_time_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="下单时间"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/sort_text_color"
+                    android:drawableRight="@drawable/sort_down_img"
+                    android:drawablePadding="5dp"
+                    />
+
+            <RadioButton
+                    android:id="@+id/undone_money_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="订单金额"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/sort_text_color"
+                    android:drawableRight="@drawable/sort_down_img"
+                    android:drawablePadding="5dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    />
+                <RadioButton
+                        android:id="@+id/undone_name_sort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="姓名"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@color/sort_text_color"
+                        android:drawableRight="@drawable/sort_down_img"
+                        android:drawablePadding="5dp"
+                        android:checked="true"
+                        />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/undone_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:groupIndicator="@null"
+            android:background="#fff"
+            android:layout_marginTop="5dp"
+            />
+</LinearLayout>

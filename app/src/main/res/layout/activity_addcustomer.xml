@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/butonwhite"
+              android:orientation="vertical"
+        >
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <ImageButton
+                android:id="@+id/addcustomer_return_bu"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_selector"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back"
+                />
+
+        <TextView
+                android:id="@+id/addcustomer_addorupdate_bu"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="新增客户"
+                android:textColor="@color/green"
+                android:textSize="25sp"
+                />
+
+        <TextView
+                android:id="@+id/addcustomer_save_bu"
+                android:layout_width="60dp "
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:text="保存"
+                android:textColor="@color/green"
+                android:textSize="19sp"
+                />
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/boldline"
+            ></View>
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="来源"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                    <TextView
+                            android:id="@+id/addcustomer_source_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:text="社区"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            />
+
+                    <RadioGroup
+                            android:id="@+id/addcustomer_source_rg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                        <RadioButton
+                                android:id="@+id/addcustomer_radio1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="社区"
+                                />
+
+                        <RadioButton
+                                android:id="@+id/addcustomer_radio2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="介绍"
+                                />
+
+                        <RadioButton
+                                android:id="@+id/addcustomer_radio3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="电话"
+                                />
+
+                        <RadioButton
+                                android:id="@+id/addcustomer_radio4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="活动"
+                                />
+
+                        <RadioButton
+                                android:id="@+id/addcustomer_radio5"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="网络"
+                                />
+                    </RadioGroup>
+                </FrameLayout>
+                <!--      <EditText
+                          android:id="@+id/addcustomer_source_ed"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_marginLeft="20dp"
+                          android:layout_marginRight="10dp"
+                          android:background="@null"
+                          android:hint="客户来源"
+
+                          android:textSize="16sp" />-->
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="工长"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <EditText
+                        android:id="@+id/addcustomer_boos_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:hint="请输入工长的名字"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="电话"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <EditText
+                        android:id="@+id/addcustomer_phonenumber_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:hint="请输入电话"
+                        android:textSize="16sp"
+                        />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="性别"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <RadioGroup
+                        android:id="@+id/addcustomer_sex_rg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="horizontal"
+                        >
+
+                    <RadioButton
+                            android:id="@+id/addcustomer_man"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="男"
+                            />
+
+                    <RadioButton
+                            android:id="@+id/addcustomer_woman"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="女"
+                            />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="籍贯"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <EditText
+                        android:id="@+id/addcustomer_birthplace_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:hint="请输入籍贯"
+                        android:textSize="16sp"
+                        />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="公司"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <EditText
+                        android:id="@+id/addcustomer_company_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:hint="请输入所属公司"
+                        android:textSize="16sp"
+                        />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="最近拜访时间"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <TextView
+                        android:id="@+id/addcustomer_firsttime_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="请选择最近拜访时间"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="最近拜访记录"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <EditText
+                        android:id="@+id/addcustomer_firstrecord_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入最近拜访记录"
+                        android:textSize="16sp"
+                        />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@color/butonwhite"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="备注"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
+
+                <EditText
+                        android:id="@+id/addcustomer_notes_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:hint="备注信息"
+                        android:textSize="16sp"
+                        />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/lowline"
+                    ></View>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

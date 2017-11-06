@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/butonwhite"
+              android:descendantFocusability="blocksDescendants"
+              android:orientation="horizontal">
+
+    <TextView android:id="@+id/listview_activiteapply_time"
+              android:layout_width="0dp"
+              android:layout_height="50dp"
+              android:layout_gravity="center"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="申请时间"
+              android:layout_marginRight="10dp"
+              android:textColor="@color/black"
+              android:textSize="15sp"/>
+    <TextView android:id="@+id/listview_activiteapply_user"
+              android:layout_width="0dp"
+              android:layout_height="50dp"
+              android:layout_gravity="center"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="申请人"
+              android:layout_marginRight="10dp"
+              android:textColor="@color/black"
+              android:textSize="15sp"/>
+
+    <Button android:id="@+id/listview_activiteapply_customer"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/activite_buttonpressed_selector"
+            android:gravity="center"
+            android:text="客户名"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+</LinearLayout>

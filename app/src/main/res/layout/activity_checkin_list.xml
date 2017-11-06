@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/customer_re"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangularframe"
+            >
+
+        <ImageButton
+                android:id="@+id/checkIn_list_back"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_selector"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back"
+                />
+
+        <TextView
+                android:id="@+id/checkIn_title"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="我的签到"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                />
+
+        <ImageView
+                android:id="@+id/add_checkIn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/add"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="5dp"
+            >
+
+        <Spinner
+                android:id="@+id/spinnerTwo"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/spinner_down"
+                />
+
+        <Spinner
+                android:id="@+id/spinnerThree"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/spinnerTwo"
+                android:background="@drawable/spinner_down"
+                />
+
+        <Spinner
+                android:id="@+id/spinner_time"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/spinner_down"
+                />
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <com.yun.ycw.crm.PullableView.PullToRefreshLayout
+                android:id="@+id/refresh_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                >
+
+            <include layout="@layout/refresh_head"/>
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.yun.ycw.crm.PullableView.PullableListView
+                    android:id="@+id/checkIn_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            <include layout="@layout/load_more"/>
+
+        </com.yun.ycw.crm.PullableView.PullToRefreshLayout>
+
+        <LinearLayout
+                android:id="@+id/show_error"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#ffe7e7e7"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                >
+
+            <ImageView
+                    android:id="@+id/no_order_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/no_order"
+                    />
+
+            <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂无签到"
+                    android:textSize="15sp"
+                    android:layout_marginTop="8dp"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/tempLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#000"
+                android:visibility="gone"
+                >
+
+            <ImageView
+                    android:id="@+id/tempImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

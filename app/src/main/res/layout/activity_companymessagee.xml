@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/butonwhite"
+              android:orientation="vertical">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/companymessagee_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_selector"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:id="@+id/companymessagee_title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="优惠政策"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+          android:background="@drawable/rectangularframe"
+          android:layout_height="1dp"></View>
+    <WebView
+        android:id="@+id/companymessagee_webview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent"></WebView>
+</LinearLayout>

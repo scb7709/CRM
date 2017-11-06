@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/butonwhite"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/companymessage_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_selector"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="公司消息"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+          android:background="@drawable/rectangularframe"
+          android:layout_height="1dp"></View>
+    <LinearLayout
+        android:id="@+id/companymessage_favorable"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/undone_layout_selector"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:src="@mipmap/favorable"
+            />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:text="优惠政策"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/back_grey"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/companymessage_distribution"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/undone_layout_selector"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:src="@mipmap/cat"
+            />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:text="配送政策"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/back_grey"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

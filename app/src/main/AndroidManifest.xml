@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.yun.ycw.crm"
+        >
+    <!-- 基础相关-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- umeng相关 推送和统计 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!-- umeng相关【必选】用以设置前台是否显示通知 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <!-- umeng 可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+      //地图包、搜索包需要的基础权限
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    //定位包、导航包需要的额外权限（注：基础权限也需要）
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+
+
+    <permission
+            android:name="com.umeng.message.example.permission.MIPUSH_RECEIVE"
+            android:protectionLevel="signatureOrSystem"
+            />
+
+    <uses-permission android:name="com.umeng.message.example.permission.MIPUSH_RECEIVE"/>
+
+    <application
+            android:name=".umeng.MyApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/yun"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            >
+        <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="05662faa519f6625187072f6cd293388"
+                />
+
+        <activity
+                android:name=".activity.MainActivity"
+                android:windowSoftInputMode="adjustPan"
+                android:label="@string/app_name"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SellCheatsActivity"/>
+        <activity android:name=".activity.DistributionActivity"/>
+        <activity android:name=".activity.FavorableActivity"/>
+        <activity android:name=".activity.CompanyMessageActivity"/>
+        <activity android:name=".activity.AddScheduleActivity"/>
+        <activity android:name=".activity.AddCustomerActivity"/>
+        <activity android:name=".activity.SubUndoneActivity"/>
+        <activity
+                android:name=".activity.HomeActivity"
+                android:windowSoftInputMode="adjustPan"
+                />
+        <activity android:name=".activity.UndoneActivity"/>
+        <activity android:name=".activity.GoodsDetailsActivity"/>
+        <activity android:name=".activity.OrderDetailsActivity"/>
+        <activity android:name=".activity.CustomerDetailActivity"/>
+        <activity android:name=".activity.PersonalCenterActivity"/>
+        <activity android:name=".activity.AchievementTeamActivity"/>
+        <activity android:name=".activity.AchievementSalesActivity"/>
+        <activity android:name=".activity.StaffStaffAcitivity"/>
+        <activity android:name=".activity.OfflineMallActivity"/>
+        <activity
+                android:name=".activity.CustomerActivity"
+                android:windowSoftInputMode="adjustPan|stateHidden"
+                />
+        <activity android:name=".activity.StaffTeamActivity"/>
+        <activity android:name=".activity.ActiviteApplyActivity"/>
+        <activity android:name=".activity.ScheduleDetailActivity"/>
+        <activity android:name=".activity.StaffScheduleListActivity"/>
+        <activity android:name=".activity.ScheduleListActivity"/>
+        <activity android:name=".activity.NewOrdersActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.CheckInActivity"
+                  android:windowSoftInputMode="adjustPan"
+                />
+        <activity android:name=".activity.CheckInListActivity"/>
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- umeng相关-->
+
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <receiver
+                android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+                android:exported="false"
+                >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+                android:name="com.umeng.message.SystemReceiver"
+                android:process=":push"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+                android:name="com.umeng.message.MessageReceiver"
+                android:exported="false"
+                android:process=":push"
+                >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+                android:name="com.umeng.message.ElectionReceiver"
+                android:process=":push"
+                >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4"/>
+
+                <category android:name="umeng"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <receiver
+                android:name="com.umeng.message.RegistrationReceiver"
+                android:exported="false"
+                >
+            <intent-filter>
+                <action android:name="com.yun.ycw.crm.intent.action.COMMAND"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <!-- 可以根据需要自行设置 android:label 中的服务名 ： -->
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <service
+                android:name="com.umeng.message.UmengService"
+                android:exported="true"
+                android:label="PushService"
+                android:process=":push"
+                >
+            <intent-filter>
+                <action android:name="com.yun.ycw.crm.intent.action.START"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.yun.ycw.crm.intent.action.COCKROACH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4"/>
+
+                <category android:name="umeng"/>
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+                android:name="com.umeng.message.UmengIntentService"
+                android:process=":push"
+                />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+                android:name="com.umeng.message.UmengMessageIntentReceiverService"
+                android:exported="true"
+                android:process=":push"
+                >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService"/>
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+                android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+                android:exported="false"
+                >
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action"/>
+            </intent-filter>
+        </service>
+
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService"/>
+
+        <!-- V2.5.0添加的Service，用于本地通知 -->
+        <!-- 如果不使用本地通知，可以注释掉本地通知服务的配置 -->
+        <service
+                android:name="com.umeng.message.local.UmengLocalNotificationService"
+                android:exported="false"
+                />
+
+
+        <!-- 本应用申请的appkey和secret-->
+        <!--android:value="568887e067e58e4aef00075d"-->
+        <!-- 2016_3_7 最新申请-->
+        <meta-data
+                android:name="UMENG_APPKEY"
+                android:value="56dd30f4e0f55a2548000ed4"
+                >
+        </meta-data>
+        <!--android:value="7a587eaa6f518731b01cc1ce010c2708 "-->
+        <!-- 2016_3_7 最新申请-->
+        <meta-data
+                android:name="UMENG_MESSAGE_SECRET"
+                android:value="c7d4813cd46fa00b006907885dabfc2f"
+                >
+        </meta-data>
+        <!-- 推广渠道 -->
+        <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="Umeng"
+                >
+        </meta-data>
+
+    </application>
+
+</manifest>

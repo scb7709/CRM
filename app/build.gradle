@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.0"
+
+
+    defaultConfig {
+        applicationId "com.yun.ycw.crm"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 6
+        versionName "1.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.+'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/rxjava-1.0.10.jar')
+    compile files('libs/retrofit-1.9.0.jar')
+    compile files('libs/okio-1.4.0.jar')
+    compile files('libs/okhttp-2.4.0.jar')
+    compile files('libs/gson-2.2.2.jar')
+    compile files('libs/com.umeng.message.lib_v2.6.0.jar')
+    compile files('libs/umeng-analytics-v5.6.1.jar')
+    compile files('libs/Volley.jar')
+    compile files('libs/mpandroidchartlibrary-2-1-5.jar')
+    compile files('libs/AMap_Search_V2.8.0_20160105.jar')
+    compile files('libs/AMap_Location_V2.2.0_20151222.jar')
+    compile files('libs/AMap_3DMap_V3.1.1_20151216.jar')
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+
+
+    <TextView
+            android:id="@+id/manager_order_time"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_height="70dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+    <TextView
+            android:id="@+id/manager_order_status"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+    <TextView
+            android:id="@+id/manager_order_money"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:textColor="@color/black"
+            android:text="0元"
+            android:gravity="center"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/manager_order_mangerdeduct"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:text="0元"
+            android:gravity="center"
+            android:textSize="12sp"
+            />
+    <TextView
+            android:id="@+id/manager_order_deduct"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="70dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:text="0元"
+            android:gravity="center"
+            android:textSize="12sp"
+            />
+</LinearLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+        >
+
+    <com.amap.api.maps.MapView
+            android:id="@+id/locationMap"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="gone"
+            />
+
+    <RelativeLayout
+            android:id="@+id/checkIn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangularframe"
+            >
+
+        <ImageButton
+                android:id="@+id/checkIn_back"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_selector"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back"
+                />
+
+        <TextView
+                android:id="@+id/checkIn_title"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="签到"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/checkIn_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkIn_layout"
+            >
+
+        <ImageView
+                android:id="@+id/checkIn_time_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/time"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/checkIn_time_img"
+                android:text="时间"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                />
+
+        <TextView
+                android:id="@+id/checkIn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/checkIn_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkIn_time_layout"
+            >
+
+        <ImageView
+                android:id="@+id/checkIn_location_img"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/location"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                />
+
+        <TextView
+                android:id="@+id/checkIn_location_img_title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/checkIn_location_img"
+                android:text="地址"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                />
+
+        <TextView
+                android:id="@+id/checkIn_location"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/checkIn_location_img_title"
+                />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:id="@+id/checkIn_cam_layout"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkIn_location_layout"
+            >
+
+        <ImageView
+                android:id="@+id/cameraImg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/photo"
+                android:layout_centerInParent="true"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/cameraImg"
+                android:text="点击拍照"
+                android:textSize="15sp"
+                android:textColor="@color/green"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                />
+    </RelativeLayout>
+
+    <FrameLayout
+            android:id="@+id/camContainer"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkIn_location_layout"
+            >
+
+        <ImageView
+                android:id="@+id/camImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+    </FrameLayout>
+
+    <LinearLayout
+            android:id="@+id/checkIn_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkIn_cam_layout"
+            >
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="备注信息"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/rectangularframe"
+                />
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/add_schedule_note_bg"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                <EditText
+                        android:id="@+id/checkIn_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@null"
+                        android:textSize="15sp"
+                        android:textColor="#000"
+                        android:hint="请输入备注内容"
+                        />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/checkIn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="签到"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/checkin_btn"
+            android:textColor="@color/checkin_text"
+            />
+</RelativeLayout>

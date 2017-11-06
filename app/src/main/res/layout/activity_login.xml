@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/butonwhite"
+              android:orientation="vertical"
+        >
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="云材网"
+            android:textColor="@color/green"
+            android:textSize="25dp"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/rectangularframe"
+            ></View>
+
+    <ImageView
+            android:id="@+id/login_logou_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+
+            android:src="@mipmap/yuncaiwang"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangularframe"
+            ></View>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+
+            >
+
+        <ImageView
+                android:id="@+id/login_phonenumber_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:src="@mipmap/user_name_gray"
+                />
+
+        <com.yun.ycw.crm.customview.EditTextWithDel
+                android:id="@+id/login_phonenumber_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:hint="请输入账号"
+                android:textSize="15sp"
+                />
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangularframe"
+            ></View>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+
+            >
+
+        <ImageView
+                android:id="@+id/login_password_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:src="@mipmap/password_gray"
+                android:text="密码"
+                />
+
+        <EditText
+                android:id="@+id/login_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:layout_marginLeft="20dp"
+                android:password="true"
+                android:textSize="15sp"
+                />
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangularframe"
+            ></View>
+
+    <TextView
+            android:id="@+id/login_forget_bu"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="忘记密码?"
+            android:visibility="gone"
+            android:textColor="@color/green"
+            android:textSize="15sp"
+            />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <Button
+                android:id="@+id/login_login_bu1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:clickable="false"
+                android:background="@drawable/my_btn_gray"
+                android:text="登 录"
+                android:textColor="#fff"
+                />
+
+        <Button
+                android:id="@+id/login_login_bu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:visibility="gone"
+                android:background="@drawable/my_btn"
+                android:text="登录"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                />
+    </FrameLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+
+            >
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                ></View>
+
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                ></View>
+    </LinearLayout>
+
+</LinearLayout>
